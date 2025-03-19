@@ -7,12 +7,14 @@ const DEFAULT_COLOR_INDEX = 0;
 function ChangeColor({
     setColorIndex,
 }: {
-    setColorIndex: (index: number) => void;
+    setColorIndex: React.Dispatch<React.SetStateAction<number>>; // Fixed typing
 }): React.JSX.Element {
     return (
         <Button
             onClick={() => {
-                setColorIndex((prevIndex) => (prevIndex + 1) % COLORS.length);
+                setColorIndex(
+                    (prevIndex: number) => (prevIndex + 1) % COLORS.length,
+                ); // Explicitly typed
             }}
         >
             Next Color
@@ -27,7 +29,7 @@ function ColorPreview({ color }: { color: string }): React.JSX.Element {
             style={{
                 width: "50px",
                 height: "50px",
-                backgroundColor: color, // Use the passed color
+                backgroundColor: color,
                 display: "inline-block",
                 verticalAlign: "bottom",
                 marginLeft: "5px",
