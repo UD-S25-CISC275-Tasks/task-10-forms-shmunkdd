@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): React.JSX.Element {
+<<<<<<< HEAD
     enum Holiday {
         Christmas = "🎄",
         Halloween = "🎃",
@@ -51,4 +52,7 @@ export function CycleHoliday(): React.JSX.Element {
             </Button>
         </div>
     );
+=======
+    return <div>Cycle Holiday</div>;
+>>>>>>> origin/task-forms
 }
