@@ -8,24 +8,9 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-<<<<<<< HEAD
-    type: QuestionType,
-): Question {
-    return {
-        id: id,
-        name: name,
-        type: type,
-        body: "",
-        expected: "",
-        options: [],
-        points: 1,
-        published: false,
-    };
-=======
     type: QuestionType
 ): Question {
     return {};
->>>>>>> origin/task-forms
 }
 
 /**
@@ -36,13 +21,7 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-<<<<<<< HEAD
-    return (
-        answer.trim().toLowerCase() === question.expected.trim().toLowerCase()
-    );
-=======
     return false;
->>>>>>> origin/task-forms
 }
 
 /**
@@ -58,14 +37,7 @@ export function isValid(question: Question, answer: string): boolean {
         question.options.includes(answer)
     );
 =======
-    return false;
->>>>>>> origin/task-forms
-}
-
-/**
- * Consumes a question and produces a string representation combining the
  * `id` and first 10 characters of the `name`. The two strings should be
- * separated by ": ". So for example, the question with id 9 and the
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
